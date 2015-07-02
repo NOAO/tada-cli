@@ -2,4 +2,6 @@ TADAOPTS=${TADAOPTS:-""}
 TADAOPTS="${TADAOPTS} \
  -o __calchdr=PROPIDtoDT,DTCALDATfromDATEOBStus \
  -o _DTTELESC=kp4m \
+ -o _DTINSTRU=mosaic \
+ -o _DTSITE=kp \
 "

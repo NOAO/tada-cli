@@ -55,7 +55,7 @@ LPOPTIONS=""
 TADAOPTS=""
 VERBOSE=0
 TIMEOUT=30
-SUBMITTED=/var/log/tada/postproc.rcvd
+#!SUBMITTED=/var/log/tada/postproc.rcvd
 filename=$1
 
 # Error codes
@@ -152,15 +152,17 @@ for filename; do
     ufile=$USER/$id/$base
     strs="$strs $ufile"
     stamp=`date '+%Y.%m.%d_%H.%M'`;
-    echo "$stamp $filename $return_code USER=$USER id=$id" >> $SUBMITTED
+    #! echo "$stamp $filename $return_code USER=$USER id=$id" >> $SUBMITTED
 
     if [ $VERBOSE -gt 0 ]; then
-	    echo "# Exeucted: $lpcmd"
-	    echo "# Submit ($req) status: $lpstat"
-	    echo "# Submitted: $ufile"
+	echo "# Executed: $lpcmd"
+	echo "# Submit ($req) status: $lpstat"
+	echo "# Submitted: $ufile"
+    else
+	echo "$req"
     fi
 done
 
-echo "# Wrote status to $SUBMITTED"
+#! echo "# Wrote status to $SUBMITTED"
 
 exit $return_code

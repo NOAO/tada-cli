@@ -1,15 +1,11 @@
 TADAOPTS=${TADAOPTS:-""}
 TADAOPTS="${TADAOPTS} \
- -o __calchdr=PROPIDtoDT \
+ -o __calchdr=PROPIDtoDT,bokOBSID \
  -o _OBSERVAT=KPNO \
+ -o _DTINSTRU=hid \
+ -o _DTSITE=kp \
+ -o _DTTELESC=kp09m \
+ -o _PROPID=2014B-0461 \
 "
 
-
-
-
-
-
-
-
-
-
+# WARNING: Stub for PROPID, OBSID
