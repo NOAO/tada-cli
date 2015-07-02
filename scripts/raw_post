@@ -11,7 +11,7 @@
 # CONSIDERATIONS:
 #   It might be better to source the personality file once for each
 #   file processed. But that would eliminate time savings from calling
-#   postproc with a list of files.  Besides, if you want the same
+#   raw_post with a list of files.  Besides, if you want the same
 #   personality used with multiple files, you can always invoke this
 #   script on one file at a time.
 #
@@ -27,19 +27,21 @@
 #
 # AUTHORS: S. Pothier
 
+cmd=`basename $0`
+#!dir=`dirname $0`
+
+
 function finish {
-    logger -p info "postproc: Normal exit of: $(basename $0) $*"
+    logger -p info "$cmd: Normal exit of: $(basename $0) $*"
 }
 trap finish EXIT
 
 function abort {
-    echo "ABORT of postproc"
-    logger -p err "postproc: Aborted($?) run of: $(basename $0) $*"
+    echo "ABORT of $cmd"
+    logger -p err "$cmd: Aborted($?) run of: $(basename $0) $*"
 }
 trap abort ERR SIGINT SIGTERM
 
-#!cmd=`basename $0`
-#!dir=`dirname $0`
 
 return_code=0
 #Absolute path to this script
@@ -55,7 +57,7 @@ LPOPTIONS=""
 TADAOPTS=""
 VERBOSE=0
 TIMEOUT=30
-#!SUBMITTED=/var/log/tada/postproc.rcvd
+#!SUBMITTED=/var/log/tada/$cmd.rcvd
 filename=$1
 
 # Error codes
