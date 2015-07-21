@@ -1,6 +1,8 @@
+#!/bin/sh
+
 TADAOPTS=${TADAOPTS:-""}
 TADAOPTS="${TADAOPTS} \
- -o __calchdr=PROPIDtoDT,DTCALDATfromDATEOBStus \
+ -o __calchdr=PROPIDplusCentury,DTCALDATfromDATEOBStus \
  -o _DTTELESC=WIYN \
  -o _DTINSTRU=mosaic \
  -o _DTSITE=whirc \

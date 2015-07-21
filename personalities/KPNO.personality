@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # Observatory: KPNO
 # PURPOSE: This file is sourced by postproc to fill in observatory
 #   specific values needed by archive ingest.

@@ -1,7 +1,10 @@
+#!/bin/sh
+
 # For instrument=soi
 TADAOPTS=${TADAOPTS:-""}
 TADAOPTS="${TADAOPTS} \
  -o __calchdr=addTimeToDATEOBS,DTCALDATfromDATEOBStus,PROPIDtoDT,INSTRUMEtoDT \
+ -o _DTINSTRU=soi \
+ -o _DTSITE=cp \
  -o _DTTELESC=soar \
-
 "

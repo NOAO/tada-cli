@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # ONLY USE FOR DEBUGGING!!!
 
 PROPID="2014B-0461"  

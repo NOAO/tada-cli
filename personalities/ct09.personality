@@ -1,8 +1,8 @@
 #!/bin/sh
 TADAOPTS=${TADAOPTS:-""}
 TADAOPTS="${TADAOPTS} \
- -o _DTINSTRU=andicam \
+ -o _DTINSTRU=arcon \
  -o _DTSITE=ct \
- -o _DTTELESC=ct13m \
+ -o _DTTELESC=ct09m \
  -o _DTPROPID=smarts \
 "

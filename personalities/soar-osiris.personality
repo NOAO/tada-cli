@@ -1,4 +1,9 @@
+#!/bin/sh
+
 TADAOPTS=${TADAOPTS:-""}
 TADAOPTS="${TADAOPTS} \
  -o __calchdr=addTimeToDATEOBS,DTCALDATfromDATEOBStus,PROPIDtoDT,INSTRUMEtoDT \
+ -o _DTINSTRU=osiris \
+ -o _DTSITE=cp \
+ -o _DTTELESC=soar \
 "

@@ -1,3 +1,5 @@
+#!/bin/sh
+
 TADAOPTS=${TADAOPTS:-""}
 TADAOPTS="${TADAOPTS} \
  -o __calchdr=DTCALDATfromDATEOBStus,PROPIDtoDT,DTTELESCfromINSTRUME \

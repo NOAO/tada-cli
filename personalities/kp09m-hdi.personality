@@ -1,11 +1,9 @@
+#!/bin/sh
 TADAOPTS=${TADAOPTS:-""}
 TADAOPTS="${TADAOPTS} \
- -o __calchdr=PROPIDtoDT,bokOBSID \
+ -o __calchdr=PROPIDtoDT \
  -o _OBSERVAT=KPNO \
  -o _DTINSTRU=hid \
  -o _DTSITE=kp \
  -o _DTTELESC=kp09m \
- -o _PROPID=2014B-0461 \
 "
-
-# WARNING: Stub for PROPID, OBSID

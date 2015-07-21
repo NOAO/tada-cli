@@ -1,3 +1,5 @@
+#!/bin/sh
+
 PROPID="2014B-0461"  
 
 source debug.personality

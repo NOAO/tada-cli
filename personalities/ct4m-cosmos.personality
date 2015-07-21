@@ -1,4 +1,9 @@
+#!/bin/sh
+
 TADAOPTS=${TADAOPTS:-""}
 TADAOPTS="${TADAOPTS} \
  -o __calchdr=PROPIDtoDT,DTCALDATfromDATEOBStus,DTTELESCfromINSTRUME \
+ -o _DTINSTRU=cosmos \
+ -o _DTSITE=ct \
+ -o _DTTELESC=ct4m \
 "
