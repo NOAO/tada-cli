@@ -1,8 +1,8 @@
 TADAOPTS=${TADAOPTS:-""}
-#!today=`date '+%Y-%m-%d'`
-#!TADAOPTS="${TADAOPTS} -o _DTCALDAT=$today"
+today=`date '+%Y-%m-%d'`
+TADAOPTS="${TADAOPTS} -o _DTCALDAT=$today"
 TADAOPTS="${TADAOPTS} \
- -o __calchdr=DTTELESCfromINSTRUME,DTCALDATfromDATEOBStus,PROPIDtoDT 
+ -o __calchdr=DTTELESCfromINSTRUME,PROPIDtoDT 
  -o _DTCOPYRI=AURA \
 "
 
