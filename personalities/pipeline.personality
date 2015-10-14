@@ -1,0 +1,8 @@
+#!/bin/sh
+
+qval=`date '+Q%Y%m%d'`
+TADAOPTS=${TADAOPTS:-""}
+TADAOPTS="${TADAOPTS} \
+ -o __source=pipeline \
+ -o _DTSUBMIT=$qval \
+"

@@ -29,26 +29,33 @@
 
 cmd=`basename $0`
 #!dir=`dirname $0`
+args="$*"
 
 
 function finish {
-    logger -p info "$cmd: Normal exit of: $(basename $0) $*"
+    logger -p info "$cmd: Normal exit of: $(basename $0) $args"
 }
 trap finish EXIT
 
 function abort {
     echo "ABORT of $cmd"
-    logger -p err "$cmd: Aborted($?) run of: $(basename $0) $*"
+    logger -p err "$cmd: Aborted($?) run of: $(basename $0) $args"
 }
 trap abort ERR SIGINT SIGTERM
 
 
 return_code=0
-#Absolute path to this script
-SCRIPT=$(readlink -f $0)
-#Absolute path this script is in
-SCRIPTPATH=$(dirname $SCRIPT)
+
+SCRIPT=$(readlink -f $0)       #Absolute path to this script
+SCRIPTPATH=$(dirname $SCRIPT)  #Absolute path this script is in
 PERSPATH=$(readlink -f "$SCRIPTPATH/../personalities")
+tadadir=$HOME/.tada
+mkdir -p $tadadir
+CLOG=$tadadir/$cmd.log  # Command log
+MLOG=$tadadir/manifest.log 
+now=`date '+%D_%T'`
+today=`date '+%F'`
+echo "$now $cmd $args" >> $CLOG
 
 PATH=$SCRIPTPATH:$PATH
 
@@ -163,6 +170,7 @@ for filename; do
     else
 	echo "$req"
     fi
+    echo "$filename $now $today" >> $MLOG    
 done
 
 #! echo "# Wrote status to $SUBMITTED"

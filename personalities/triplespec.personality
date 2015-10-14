@@ -1,0 +1,31 @@
+#!/bin/sh
+
+###  WARNING WARNING WARNING  ###################################
+###
+### This personality overwrites some RAW fields.  The fields must be
+### moved to the RAW input or ingestion will not be possible in
+### production.
+###
+###  WARNING WARNING WARNING  ###################################
+
+
+#  UTSHUT  => DATE-OBS
+#  INSTRUM => INSTRUME
+#  <label> => PROPID    # exists but is blank
+
+TADAOPTS=${TADAOPTS:-""}
+TADAOPTS="${TADAOPTS} \
+ -o __calchdr=PROPIDtoDT,DTCALDATfromDATEOBSchile,DTTELESCfromINSTRUME \
+ -o _DTSITE=ct \
+ -o _DTTELESC=ct4m \
+ -o _DTINSTRU=triplespec \
+\
+ -o __OPS_PREAPPLY_UPDATE=YES
+ -o _INSTRUME=triplespec \
+ -o _DATE-OBS=2015-05-01T22:56:54.72 \
+ -o _PROPID=2014B-0461 \
+"
+
+
+# -o _DTACQNAM=/data/triplespec4/UT20150501_night03/sp_n03_0017.fits 
+# -o _DTNSANAM=foo 

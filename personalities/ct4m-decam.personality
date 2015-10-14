@@ -3,7 +3,7 @@
 TADAOPTS=${TADAOPTS:-""}
 TADAOPTS="${TADAOPTS} \
  -o __calchdr=PROPIDtoDT,DTCALDATfromDATEOBSchile,DTTELESCfromINSTRUME \
- -o _DTINSTRU=cosmos \
+ -o _DTINSTRU=decam \
  -o _DTSITE=ct \
  -o _DTTELESC=ct4m \
 "

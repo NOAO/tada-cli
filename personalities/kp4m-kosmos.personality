@@ -1,0 +1,9 @@
+#!/bin/sh
+
+TADAOPTS=${TADAOPTS:-""}
+TADAOPTS="${TADAOPTS} \
+ -o __calchdr=PROPIDplusCentury,DTCALDATfromDATEOBStus,DTTELESCfromINSTRUME \
+ -o _DTINSTRU=cosmos \
+ -o _DTSITE=kp \
+ -o _DTTELESC=kp4m \
+"

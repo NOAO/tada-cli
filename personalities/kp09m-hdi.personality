@@ -1,9 +1,12 @@
 #!/bin/sh
 TADAOPTS=${TADAOPTS:-""}
 TADAOPTS="${TADAOPTS} \
- -o __calchdr=PROPIDtoDT \
+ -o __calchdr=PROPIDtoDT,tsepDATEOBS,DTCALDATfromDATEOBStus \
  -o _OBSERVAT=KPNO \
  -o _DTINSTRU=hid \
  -o _DTSITE=kp \
  -o _DTTELESC=kp09m \
+ -o _OBSID=NA \
 "
+
+# WARNING: no good value provided for OBSID
