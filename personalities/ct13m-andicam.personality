@@ -1,9 +1,11 @@
 #!/bin/sh
 TADAOPTS=${TADAOPTS:-""}
 TADAOPTS="${TADAOPTS} \
- -o __calchdr=addTimeToDATEOBS,DTCALDATfromDATEOBStus \
+ -o __calchdr=trustHdrPropid,IMAGTYPEtoOBSTYPE,addTimeToDATEOBS,DTCALDATfromDATEOBStus \
  -o _DTINSTRU=andicam \
  -o _DTSITE=ct \
  -o _DTTELESC=ct13m \
- -o _DTPROPID=smarts \
+ -o _AAPROPID=smarts \
+ -o _PROCTYPE=raw \
+ -o _PRODTYPE=image \
 "

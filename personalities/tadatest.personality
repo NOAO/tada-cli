@@ -1,0 +1,8 @@
+#!/bin/sh
+
+TADAOPTS=${TADAOPTS:-""}
+TADAOPTS="${TADAOPTS} \
+ -o __job_tag=TADATEST \
+"
+
+

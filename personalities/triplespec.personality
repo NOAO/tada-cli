@@ -19,11 +19,11 @@ TADAOPTS="${TADAOPTS} \
  -o _DTSITE=ct \
  -o _DTTELESC=ct4m \
  -o _DTINSTRU=triplespec \
-\
  -o __OPS_PREAPPLY_UPDATE=YES
  -o _INSTRUME=triplespec \
  -o _DATE-OBS=2015-05-01T22:56:54.72 \
  -o _PROPID=2014B-0461 \
+ -o _PROCTYPE=raw \
 "
 
 

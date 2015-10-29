@@ -3,9 +3,12 @@
 # For instrument=soi
 TADAOPTS=${TADAOPTS:-""}
 TADAOPTS="${TADAOPTS} \
- -o __calchdr=addTimeToDATEOBS,DTCALDATfromDATEOBSchile,INSTRUMEtoDT \
+ -o __calchdr=addTimeToDATEOBS,DTCALDATfromDATEOBSchile,INSTRUMEtoDT,trustSchedOrAAPropid \
  -o _DTINSTRU=goodman \
  -o _DTSITE=cp \
- -o _DTTELESC=goodman \
- -o _DTPROPID=soar \
+ -o _DTTELESC=soar \
+ -o _AAPROPID=soar \
+ -o _OBSERVAT=SOAR \
+ -o _PROCTYPE=raw \
+ -o _PRODTYPE=image \
 "

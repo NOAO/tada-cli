@@ -1,8 +1,10 @@
 #!/bin/sh
 TADAOPTS=${TADAOPTS:-""}
 TADAOPTS="${TADAOPTS} \
+ -o __calchdr=trustHdrPropid \
  -o _DTINSTRU=arcon \
  -o _DTSITE=ct \
  -o _DTTELESC=ct09m \
- -o _DTPROPID=smarts \
+ -o _AAPROPID=smarts \
+ -o _PROCTYPE=raw \
 "

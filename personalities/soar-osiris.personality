@@ -2,9 +2,12 @@
 
 TADAOPTS=${TADAOPTS:-""}
 TADAOPTS="${TADAOPTS} \
- -o __calchdr=addTimeToDATEOBS,DTCALDATfromDATEOBSchile,INSTRUMEtoDT \
+ -o __calchdr=addTimeToDATEOBS,IMAGTYPEtoOBSTYPE,DTCALDATfromDATEOBSchile,INSTRUMEtoDT,trustSchedOrAAPropid \
  -o _DTINSTRU=osiris \
  -o _DTSITE=cp \
  -o _DTTELESC=soar \
- -o _DTPROPID=soar \
+ -o _AAPROPID=soar \
+ -o _OBSERVAT=SOAR \
+ -o _PROCTYPE=raw \
+ -o _PRODTYPE=image \
 "

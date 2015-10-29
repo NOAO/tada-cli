@@ -18,7 +18,7 @@ PROPID="2015A-0801" # real
 TADAOPTS=${TADAOPTS:-""}
 TADAOPTS="${TADAOPTS} \
  -o __warn_unknown=0 \
- -o __calchdr=IMAGTYPEtoOBSTYPE,DTTELESCfromINSTRUME,addTimeToDATEOBS,DTCALDATfromDATEOBStus,bokOBSID \
+ -o __calchdr=trustHdrPropid,IMAGTYPEtoOBSTYPE,DTTELESCfromINSTRUME,addTimeToDATEOBS,DTCALDATfromDATEOBStus,bokOBSID \
  -o _OBSID=NA \
  -o _DTCOPYRI=University_of_Arizona \
  -o _DTOBSERV=University_of_Arizona_Observatories \
@@ -30,11 +30,12 @@ TADAOPTS="${TADAOPTS} \
  -o _DTTELESC=bok23m \
  -o _DTINSTRU=90prime \
  -o _DTTITLE=Beijing-Arizona_Sky_Survey_(BASS) \
- -o _PROCTYPE=Raw \
+ -o _OBSERVAT=Steward 
+ -o _PROCTYPE=raw \
  -o _PRODTYPE=Image \
 "
 
-# -o _OBSERVAT=Steward 
+# 
 # -o __jobid_type=seconds 
 
 

@@ -1,10 +1,10 @@
 #!/bin/sh
 
-PROPID="2014B-0461"  
+#! PROPID="2014B-0461"  
 
 TADAOPTS=${TADAOPTS:-""}
 TADAOPTS="${TADAOPTS} \
-  -o __job_tag=TADATEST2 \
+  -o __job_tag=TADASMOKE \
 "
 
 ## This adds a bignum to archive filename to make it unique.

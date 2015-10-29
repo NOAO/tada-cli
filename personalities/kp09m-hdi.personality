@@ -1,12 +1,15 @@
 #!/bin/sh
 TADAOPTS=${TADAOPTS:-""}
 TADAOPTS="${TADAOPTS} \
- -o __calchdr=PROPIDtoDT,tsepDATEOBS,DTCALDATfromDATEOBStus \
+ -o __calchdr=DATEOBSfromDATE,DTCALDATfromDATEOBStus,trustSchedPropid \
  -o _OBSERVAT=KPNO \
- -o _DTINSTRU=hid \
+ -o _DTINSTRU=hdi \
  -o _DTSITE=kp \
  -o _DTTELESC=kp09m \
  -o _OBSID=NA \
+ -o _PROCTYPE=raw \
+ -o _PRODTYPE=image \
 "
 
-# WARNING: no good value provided for OBSID
+# No good value provided for OBSID !!!!
+# PRODTYPE is WRONGLY hardcoded.  Need GOOD approach.
