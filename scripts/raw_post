@@ -170,7 +170,7 @@ for filename; do
     else
 	echo "$req"
     fi
-    echo "$filename $now $today" >> $MLOG    
+    echo "$pwd/$filename $now $today" >> $MLOG    
 done
 
 #! echo "# Wrote status to $SUBMITTED"
