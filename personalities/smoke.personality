@@ -1,7 +1,5 @@
 #!/bin/sh
 
-#! PROPID="2014B-0461"  
-
 TADAOPTS=${TADAOPTS:-""}
 TADAOPTS="${TADAOPTS} \
   -o __job_tag=TADASMOKE \
