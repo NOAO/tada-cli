@@ -15,7 +15,7 @@
 
 TADAOPTS=${TADAOPTS:-""}
 TADAOPTS="${TADAOPTS} \
- -o __calchdr=fixTriplespec,DTCALDATfromDATEOBSchile,DTTELESCfromINSTRUME \
+ -o __calchdr=fixTriplespec,DTCALDATfromDATEOBSchile \
  -o _DTSITE=ct \
  -o _DTTELESC=ct4m \
  -o _DTINSTRU=triplespec \

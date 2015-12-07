@@ -2,7 +2,7 @@
 
 TADAOPTS=${TADAOPTS:-""}
 TADAOPTS="${TADAOPTS} \
- -o __calchdr=DTCALDATfromDATEOBSchile,DTTELESCfromINSTRUME,trustSchedPropid \
+ -o __calchdr=DTCALDATfromDATEOBSchile,trustSchedPropid \
  -o _DTINSTRU=cosmos \
  -o _DTSITE=ct \
  -o _DTTELESC=ct4m \

@@ -1,12 +1,13 @@
 #!/bin/sh
 TADAOPTS=${TADAOPTS:-""}
 TADAOPTS="${TADAOPTS} \
- -o __calchdr=trustHdrPropid,IMAGTYPEtoOBSTYPE,DTCALDATfromDATEOBStus,DTTELESCfromINSTRUME \
+ -o __calchdr=trustHdrPropid,IMAGTYPEtoOBSTYPE,DTCALDATfromDATEOBStus \
  -o _DTTELESC=ct15m \
  -o _DTSITE=ct \
  -o _DTINSTRU=echelle \
  -o _PROCTYPE=raw \
  -o _PRODTYPE=image \
- -o _INSTRUME=echelle \
  -o _AAPROPID=smarts \
 "
+
+# -o _INSTRUME=echelle 

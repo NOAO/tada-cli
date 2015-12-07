@@ -3,6 +3,7 @@
 TADAOPTS=${TADAOPTS:-""}
 TADAOPTS="${TADAOPTS} \
   -o __job_tag=TADASMOKE \
+  -o __do_audit=1 \
 "
 
 ## This adds a bignum to archive filename to make it unique.

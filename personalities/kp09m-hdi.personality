@@ -6,10 +6,11 @@ TADAOPTS="${TADAOPTS} \
  -o _DTINSTRU=hdi \
  -o _DTSITE=kp \
  -o _DTTELESC=kp09m \
- -o _OBSID=NA \
  -o _PROCTYPE=raw \
  -o _PRODTYPE=image \
 "
 
-# No good value provided for OBSID !!!!
 # PRODTYPE is WRONGLY hardcoded.  Need GOOD approach.
+
+# No good value provided for OBSID !!!!
+# -o _OBSID=NA 

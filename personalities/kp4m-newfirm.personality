@@ -2,7 +2,7 @@
 
 TADAOPTS=${TADAOPTS:-""}
 TADAOPTS="${TADAOPTS} \
- -o __calchdr=trustHdrPropid,DTCALDATfromDATEOBStus,DTTELESCfromINSTRUME \
+ -o __calchdr=trustHdrPropid,DTCALDATfromDATEOBStus \
  -o _DTINSTRU=newfirm \
  -o _DTSITE=kp \
  -o _DTTELESC=kp4m \

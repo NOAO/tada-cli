@@ -6,7 +6,7 @@ TADAOPTS="${TADAOPTS} \
  -o _DTTELESC=kp4m \
  -o _DTINSTRU=mosaic \
  -o _DTSITE=kp \
- -o _AAPROPIDS=noao \
+ -o _AAPROPID=noao \
  -o _PROCTYPE=raw \
  -o _PRODTYPE=image \
 "
