@@ -1,5 +1,10 @@
 #!/bin/bash
 hosttype=${1:-MOUNTAIN}
+if [ -x /usr/bin/gmetric ]; then
+    echo "hosttype=$hosttype"
+else
+    exit
+fi
 
 opts="--type=uint16 --units=size --group=tada"
 /usr/bin/gmetric $opts -n tada_inactive -v `/usr/bin/dqcli -c inactive` 
