@@ -1,8 +1,6 @@
 #!/bin/bash
 hosttype=${1:-MOUNTAIN}
-if [ -x /usr/bin/gmetric ]; then
-    echo "hosttype=$hosttype"
-else
+if [ ! -x /usr/bin/gmetric ]; then
     exit
 fi
 
