@@ -1,6 +1,0 @@
-#!/bin/sh	
-
-TADAOPTS=${TADAOPTS:-""}
-TADAOPTS="${TADAOPTS} \
- -o __calchdr=PROPIDtoDT \
-"

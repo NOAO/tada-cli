@@ -1,6 +1,12 @@
-#!/bin/sh	
+#!/bin/sh
 
 TADAOPTS=${TADAOPTS:-""}
 TADAOPTS="${TADAOPTS} \
- -o __calchdr=PROPIDtoDT \
+ -o __calchdr=DTCALDATfromDATEOBStus,trustSchedOrAAPropid \
+ -o _DTTELESC=kp4m \
+ -o _DTINSTRU=mosaic3 \
+ -o _DTSITE=kp \
+ -o _AAPROPID=noao \
+ -o _PROCTYPE=raw \
+ -o _PRODTYPE=image \
 "

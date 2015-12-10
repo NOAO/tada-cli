@@ -1,0 +1,5 @@
+2015-12-10  Steve Pothier  <pothier@noao.edu>
+
+	* mosaic3.personality (TADAOPTS): Cloned from kp4m-mosaic_1_1,
+	DTINSTRU=mosaic4
+
