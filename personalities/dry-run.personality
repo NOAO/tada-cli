@@ -1,0 +1,11 @@
+#!/bin/sh
+# PURPOSE:
+# Don't actually try to do ingest.  Do parse and modify header.
+# Calculate archive full path and filename and output them.
+
+TADAOPTS=${TADAOPTS:-""}
+TADAOPTS="${TADAOPTS} \
+  -o __test_resubmit=1 \
+  -o __dry_run=1 \
+"
+
