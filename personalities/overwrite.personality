@@ -1,0 +1,11 @@
+#!/bin/sh
+# PURPOSE:
+#  Use this personality in ADDITION to the intrument specific one to
+#  disable check for existing iRODS *.hdr file.  Otherwise if the *.hdr file
+#  exists no ingest will be attempted.
+
+TADAOPTS=${TADAOPTS:-""}
+TADAOPTS="${TADAOPTS} \
+  -o __test_resubmit=1 \
+"
+
