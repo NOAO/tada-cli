@@ -1,0 +1,11 @@
+options: {AAPROPID: soar,
+    DTINSTRU: osiris,
+    DTSITE: cp, DTTELESC: soar,
+    OBSERVAT: SOAR, PROCTYPE: raw,
+    PRODTYPE: image}
+params:
+    calchdr: [addTimeToDATEOBS,
+        IMAGTYPEtoOBSTYPE,
+        DTCALDATfromDATEOBSchile,
+        INSTRUMEtoDT,
+        trustSchedOrAAPropid]

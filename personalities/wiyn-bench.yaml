@@ -1,0 +1,7 @@
+options: {DTINSTRU: bench,
+    DTSITE: kp, DTTELESC: kp35m,
+    PROCTYPE: raw, PRODTYPE: image}
+params:
+    calchdr: [trustHdrPropid,
+        IMAGTYPEtoOBSTYPE,
+        DTCALDATfromDATEOBStus]

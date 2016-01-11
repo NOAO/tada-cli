@@ -1,0 +1,10 @@
+options: {AAPROPID: soar,
+    DTINSTRU: goodman,
+    DTSITE: cp, DTTELESC: soar,
+    OBSERVAT: SOAR, PROCTYPE: raw,
+    PRODTYPE: image}
+params:
+    calchdr: [addTimeToDATEOBS,
+        DTCALDATfromDATEOBSchile,
+        INSTRUMEtoDT,
+        trustSchedOrAAPropid]

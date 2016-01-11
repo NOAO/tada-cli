@@ -1,0 +1,7 @@
+options: {DTINSTRU: whirc,
+    DTSITE: kp, DTTELESC: WIYN,
+    PROCTYPE: raw, PRODTYPE: image}
+params:
+    calchdr: [PROPIDplusCentury,
+        IMAGTYPEtoOBSTYPE,
+        DTCALDATfromDATEOBStus]

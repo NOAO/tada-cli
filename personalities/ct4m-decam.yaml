@@ -1,0 +1,6 @@
+options: {DTINSTRU: decam,
+    DTSITE: ct, DTTELESC: ct4m,
+    PROCTYPE: raw}
+params:
+    calchdr: [trustHdrPropid,
+        DTCALDATfromDATEOBSchile]
