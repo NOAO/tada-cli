@@ -32,7 +32,7 @@ OPTIONS:
 while getopts "hm:p:t:v:" opt; do
     #!echo "opt=<$opt>"
     case $opt in
-	h)
+	    h)
             echo "$usage"
             exit 1
             ;;

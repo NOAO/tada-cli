@@ -5,4 +5,4 @@ options: {AAPROPID: smarts,
 params:
     calchdr: [trustHdrPropid,
         IMAGTYPEtoOBSTYPE,
-        DTCALDATfromDATEOBSchile]
+        DTCALDATfromDATEOBStus]

@@ -78,20 +78,20 @@ MANIFEST=$1
 
 maxTries=$TIMEOUT
 readarray strings < $MANIFEST
-for str in "${strings[@]}"
+for str in "${strings[@]%?}"
 do           
     if [ "$VERBOSE" -gt 0 ]; then
        echo "Looking in logfile for: \"$str\""
        echo "# Waiting $maxTries seconds for $str in '$LOGFILE'"
     fi
     tries=0
-    echo -n "# wait"
-    while ! grep -F "\'$str\'" $LOGFILE > /dev/null; do
+    echo -n "# wait($maxTries)"
+    while ! grep -F "$str" $LOGFILE > /dev/null; do
 	    tries=$((tries+1))
 	    echo -n "."
 	    if [ "$tries" -gt "$maxTries" ]; then
 	        echo
-	        echo "Aborted after maxTries=$maxTries: $str NOT FOUND"
+	        echo "Aborted after maxTries=$maxTries: \"$str\" NOT FOUND"
 	        exit 1
 	    fi
 	    sleep 1

@@ -1,9 +1,0 @@
-options: {DTINSTRU: triplespec,
-    DTPROPID: tspec, DTSITE: ct,
-    DTTELESC: ct4m, INSTRUME: triplespec,
-    PROCTYPE: raw, PRODTYPE: image,
-    PROPID: tspec}
-params:
-    OPS_PREAPPLY_UPDATE: 'YES'
-    calchdr: [fixTriplespec,
-        DTCALDATfromDATEOBSchile]

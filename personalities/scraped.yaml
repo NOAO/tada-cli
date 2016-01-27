@@ -1,4 +1,0 @@
-options: {}
-params:
-    calchdr: [DTCALDATfromDATEOBStus,
-        PROPIDtoDT]
