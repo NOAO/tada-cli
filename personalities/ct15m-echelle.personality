@@ -1,7 +1,7 @@
 #!/bin/sh
 TADAOPTS=${TADAOPTS:-""}
 TADAOPTS="${TADAOPTS} \
- -o __calchdr=trustHdrPropid,IMAGTYPEtoOBSTYPE,DTCALDATfromDATEOBStus \
+ -o __calchdr=trustHdrPropid,IMAGTYPEtoOBSTYPE,DTCALDATfromDATEOBSchile \
  -o _DTTELESC=ct15m \
  -o _DTSITE=ct \
  -o _DTINSTRU=echelle \

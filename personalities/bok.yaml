@@ -1,0 +1,21 @@
+options: {AAPROPID: 2015A-0801,
+    DTCOPYRI: University
+        of Arizona, DTINSTRU: 90prime,
+    DTOBSERV: University
+        of Arizona Observatories,
+    DTPI: Xiaohui Fan,
+    DTPIAFFL: University
+        of Arizona, DTPROPID: 2015A-0801,
+    DTSITE: kp, DTTELESC: bok23m,
+    DTTITLE: Beijing-Arizona
+        Sky Survey (BASS),
+    OBSERVAT: Steward,
+    OBSID: NA, PROCTYPE: raw,
+    PRODTYPE: Image, PROPID: 2015A-0801}
+params:
+    calchdr: [trustHdrPropid,
+        IMAGTYPEtoOBSTYPE,
+        addTimeToDATEOBS,
+        DTCALDATfromDATEOBStus,
+        bokOBSID]
+    warn_unknown: '0'

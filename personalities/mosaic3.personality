@@ -2,11 +2,10 @@
 
 TADAOPTS=${TADAOPTS:-""}
 TADAOPTS="${TADAOPTS} \
- -o __calchdr=DTCALDATfromDATEOBStus,trustSchedOrAAPropid \
+ -o __calchdr=trustHdrPropid,DTCALDATfromDATEOBStus \
  -o _DTTELESC=kp4m \
  -o _DTINSTRU=mosaic3 \
  -o _DTSITE=kp \
- -o _AAPROPID=noao \
  -o _PROCTYPE=raw \
  -o _PRODTYPE=image \
 "

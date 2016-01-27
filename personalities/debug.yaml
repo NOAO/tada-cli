@@ -1,0 +1,3 @@
+options: {}
+params: {jobid_type: seconds,
+    source: dome, warn_unknown: '1'}
