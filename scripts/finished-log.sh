@@ -61,7 +61,6 @@ done
 #! echo "OPTIND=$OPTIND"
 for (( x=1; x<$OPTIND; x++ )); do shift; done
 
-
 RAC=1 # Required Argument Count
 if [ $# -lt $RAC ]; then
     echo "Not enough non-option arguments. Expect at least $RAC."
@@ -74,29 +73,38 @@ MANIFEST=$1
 
 ##############################################################################
 
+function echoverbose () {
+    if [ "$VERBOSE" -gt 0 ]; then
+        echo $1
+    fi
+}
+function echonverbose () {
+    if [ "$VERBOSE" -gt 0 ]; then
+        echo -n $1
+    fi
+}
 
 
 maxTries=$TIMEOUT
 readarray strings < $MANIFEST
 for str in "${strings[@]%?}"
 do           
-    if [ "$VERBOSE" -gt 0 ]; then
-       echo "Looking in logfile for: \"$str\""
-       echo "# Waiting $maxTries seconds for $str in '$LOGFILE'"
-    fi
+    echoverbose "Looking in logfile for: \"$str\""
+    echoverbose "# Waiting $maxTries seconds for $str in '$LOGFILE'"
     tries=0
-    echo -n "# wait($maxTries)"
+    echonverbose -n "# wait($maxTries)"
     while ! grep -F "$str" $LOGFILE > /dev/null; do
 	    tries=$((tries+1))
-	    echo -n "."
+    	echonverbose "."
 	    if [ "$tries" -gt "$maxTries" ]; then
+            echoverbose ""
 	        echo
 	        echo "Aborted after maxTries=$maxTries: \"$str\" NOT FOUND"
 	        exit 1
 	    fi
 	    sleep 1
     done
-    echo " Done in $tries seconds"
+    echoverbose " Done in $tries seconds"
 done
 
 exit 0
