@@ -74,6 +74,6 @@ options:
 params:
     filename: $fitsfile
     job_tag: TADASMOKE
-    test_resubmit: '1'
+    test_resubmit: 2
 EOF
 
