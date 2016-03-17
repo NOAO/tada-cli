@@ -1,0 +1,16 @@
+options:
+  DTINSTRU: triplespec
+  PROPID: 2016A-0612
+  DTPROPID: 2016A-0612
+  DTSITE: ct
+  DTTELESC: ct4m
+  INSTRUME: triplespec
+  PROCTYPE: raw
+  PRODTYPE: image
+  TELESCOP: ct4m
+params:
+  OPS_PREAPPLY_UPDATE: 'YES'
+  calchdr:
+    - fixTriplespec
+    - trustHdrPropid
+    - DTCALDATfromDATEOBSchile
