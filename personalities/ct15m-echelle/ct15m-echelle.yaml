@@ -1,8 +1,12 @@
-options: {AAPROPID: smarts,
-    DTINSTRU: echelle,
-    DTSITE: ct, DTTELESC: ct15m,
-    PROCTYPE: raw, PRODTYPE: image}
+options:
+  AAPROPID: smarts
+  DTINSTRU: echelle
+  DTSITE: ct
+  DTTELESC: ct15m
+  PROCTYPE: raw
+  PRODTYPE: image
 params:
-    calchdr: [trustHdrPropid,
-        IMAGTYPEtoOBSTYPE,
-        DTCALDATfromDATEOBStus]
+  calchdr:
+  - trustHdrPropid
+  - IMAGTYPEtoOBSTYPE
+  - DTCALDATfromDATEOBStus

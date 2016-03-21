@@ -1,7 +1,11 @@
-options: {AAPROPID: noao,
-    DTINSTRU: mosaic,
-    DTSITE: kp, DTTELESC: kp4m,
-    PROCTYPE: raw, PRODTYPE: image}
+options:
+  AAPROPID: noao
+  DTINSTRU: mosaic
+  DTSITE: kp
+  DTTELESC: kp4m
+  PROCTYPE: raw
+  PRODTYPE: image
 params:
-    calchdr: [DTCALDATfromDATEOBStus,
-        trustSchedOrAAPropid]
+  calchdr:
+  - DTCALDATfromDATEOBStus
+  - trustSchedOrAAPropid

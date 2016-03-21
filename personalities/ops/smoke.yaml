@@ -1,3 +1,4 @@
 options: {}
-params: {job_tag: TADASMOKE,
-    test_resubmit: '2'}
+params:
+  job_tag: TADASMOKE
+  test_resubmit: '2'

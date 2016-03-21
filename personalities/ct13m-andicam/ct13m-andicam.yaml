@@ -1,9 +1,13 @@
-options: {AAPROPID: smarts,
-    DTINSTRU: andicam,
-    DTSITE: ct, DTTELESC: ct13m,
-    PROCTYPE: raw, PRODTYPE: image}
+options:
+  AAPROPID: smarts
+  DTINSTRU: andicam
+  DTSITE: ct
+  DTTELESC: ct13m
+  PROCTYPE: raw
+  PRODTYPE: image
 params:
-    calchdr: [trustHdrPropid,
-        IMAGTYPEtoOBSTYPE,
-        addTimeToDATEOBS,
-        DTCALDATfromDATEOBStus]
+  calchdr:
+  - trustHdrPropid
+  - IMAGTYPEtoOBSTYPE
+  - addTimeToDATEOBS
+  - DTCALDATfromDATEOBStus

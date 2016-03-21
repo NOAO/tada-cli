@@ -1,13 +1,13 @@
 options:
+  DTINSTRU: ARCOIRIS
   DTPROPID: 2016A-0612
-  PROPID: 2016A-0612
   DTSITE: ct
   DTTELESC: ct4m
   PROCTYPE: raw
   PRODTYPE: image
-  DTINSTRU: ARCOIRIS
+  PROPID: 2016A-0612
 params:
   OPS_PREAPPLY_UPDATE: 'YES'
   calchdr:
-    - DTCALDATfromDATEOBSchile
-    - trustHdrPropid
+  - DTCALDATfromDATEOBSchile
+  - trustHdrPropid

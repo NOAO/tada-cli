@@ -1,2 +1,3 @@
 options: {}
-params: {test_resubmit: '1'}
+params:
+  test_resubmit: '1'

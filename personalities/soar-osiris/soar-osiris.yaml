@@ -1,11 +1,15 @@
-options: {AAPROPID: soar,
-    DTINSTRU: osiris,
-    DTSITE: cp, DTTELESC: soar,
-    OBSERVAT: SOAR, PROCTYPE: raw,
-    PRODTYPE: image}
+options:
+  AAPROPID: soar
+  DTINSTRU: osiris
+  DTSITE: cp
+  DTTELESC: soar
+  OBSERVAT: SOAR
+  PROCTYPE: raw
+  PRODTYPE: image
 params:
-    calchdr: [addTimeToDATEOBS,
-        IMAGTYPEtoOBSTYPE,
-        DTCALDATfromDATEOBSchile,
-        INSTRUMEtoDT,
-        trustSchedOrAAPropid]
+  calchdr:
+  - addTimeToDATEOBS
+  - IMAGTYPEtoOBSTYPE
+  - DTCALDATfromDATEOBSchile
+  - INSTRUMEtoDT
+  - trustSchedOrAAPropid

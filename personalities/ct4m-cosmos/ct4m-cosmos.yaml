@@ -1,6 +1,10 @@
-options: {DTINSTRU: cosmos,
-    DTSITE: ct, DTTELESC: ct4m,
-    PROCTYPE: raw, PRODTYPE: image}
+options:
+  DTINSTRU: cosmos
+  DTSITE: ct
+  DTTELESC: ct4m
+  PROCTYPE: raw
+  PRODTYPE: image
 params:
-    calchdr: [DTCALDATfromDATEOBSchile,
-        trustSchedPropid]
+  calchdr:
+  - DTCALDATfromDATEOBSchile
+  - trustSchedPropid

@@ -1,8 +1,12 @@
-options: {DTINSTRU: hdi,
-    DTSITE: kp, DTTELESC: kp09m,
-    OBSERVAT: KPNO, PROCTYPE: raw,
-    PRODTYPE: image}
+options:
+  DTINSTRU: hdi
+  DTSITE: kp
+  DTTELESC: kp09m
+  OBSERVAT: KPNO
+  PROCTYPE: raw
+  PRODTYPE: image
 params:
-    calchdr: [DATEOBSfromDATE,
-        DTCALDATfromDATEOBStus,
-        trustSchedPropid]
+  calchdr:
+  - DATEOBSfromDATE
+  - DTCALDATfromDATEOBStus
+  - trustSchedPropid

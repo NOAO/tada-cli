@@ -1,2 +1,4 @@
-options: {DTSUBMIT: Q20160126}
-params: {source: pipeline}
+options:
+  DTSUBMIT: Q20160126
+params:
+  source: pipeline

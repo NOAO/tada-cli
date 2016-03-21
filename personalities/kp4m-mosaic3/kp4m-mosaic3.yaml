@@ -1,6 +1,10 @@
-options: {DTINSTRU: mosaic3,
-    DTSITE: kp, DTTELESC: kp4m,
-    PROCTYPE: raw, PRODTYPE: image}
+options:
+  DTINSTRU: mosaic3
+  DTSITE: kp
+  DTTELESC: kp4m
+  PROCTYPE: raw
+  PRODTYPE: image
 params:
-    calchdr: [trustHdrPropid,
-        DTCALDATfromDATEOBStus]
+  calchdr:
+  - trustHdrPropid
+  - DTCALDATfromDATEOBStus

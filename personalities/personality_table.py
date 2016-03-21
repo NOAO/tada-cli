@@ -7,6 +7,8 @@ import logging
 import csv
 import os.path
 import subprocess
+import yaml
+
 
 def get_personality_dict(personality_file):
     logging.debug('EXECUTING: get_personality_dict({})'
@@ -34,7 +36,7 @@ def get_personality_dict(personality_file):
     return options, opt_params
 
 
-def gen_table(pfile_list, out_csvfile):
+def gen_table_from_bash(pfile_list, out_csvfile):
     """Output CSV table. Row per personality, column per field"""
     #print('DBG-0: pfile_list={}'.format(pfile_list))
     # First pass just to collect fields.
@@ -52,10 +54,38 @@ def gen_table(pfile_list, out_csvfile):
     writer.writeheader()
     for pdict in pdict_list:
         writer.writerow(pdict)
+
+
+def gen_table_from_yaml(pfile_list, out_csvfile):
+    """Output CSV table. Row per personality, column per field"""
+    # First pass just to collect fields.
+    fields = set()
+    params = set()
+    pdict_list = list()
+    for yamlfile in pfile_list:
+        print('YAML file = {}'.format(yamlfile))
+        with open(yamlfile) as yy:
+            yd = yaml.safe_load(yy)
+        yd['options']['yamlfile'] = yamlfile
+        pdict_list.append(yd)
+        fields.update(yd['options'].keys())
+        params.update(yd['params'].keys())
+
+    columns = ['yamlfile']+sorted(list(fields))
+    columns += sorted(list(params))
+    writer = csv.DictWriter(out_csvfile, fieldnames=columns)
+    writer.writeheader()
+    for yd in pdict_list:
+        pdict={}
+        if 'params' in yd and 'calchdr' in yd['params']:
+            calcfuncs = yd['params']['calchdr']
+            yd['params']['calchdr'] = ';'.join(calcfuncs)
+
+        pdict.update(yd['options'])
+        pdict.update(yd['params'])
+        writer.writerow(pdict)
+
         
-
-
-
 ##############################################################################
 
 def main():
@@ -67,7 +97,7 @@ def main():
     parser.add_argument('--version', action='version', version='1.0.1')
     parser.add_argument('personality_files', nargs='+',
                         help='Personality files to analyze.')
-    parser.add_argument('csvout', type=argparse.FileType('w'),
+    parser.add_argument('--csvout', type=argparse.FileType('w'),
                         help='CSV output file')
 
     parser.add_argument('--loglevel',
@@ -90,7 +120,8 @@ def main():
                         datefmt='%m-%d %H:%M')
     logging.debug('Debug output is enabled in %s !!!', sys.argv[0])
 
-    gen_table(args.personality_files, args.csvout)
+    #gen_table_from_bash(args.personality_files, args.csvout)
+    gen_table_from_yaml(args.personality_files, args.csvout)
 
 if __name__ == '__main__':
     main()
