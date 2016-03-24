@@ -1,0 +1,11 @@
+options:
+  DTSITE: ct
+  DTTELESC: ct4m
+  PROCTYPE: raw
+  PRODTYPE: image
+  DTINSTRU: ARCOIRIS
+params:
+  OPS_PREAPPLY_UPDATE: 'YES'
+  calchdr:
+    - DTCALDATfromDATEOBSchile
+    - trustHdrPropid
