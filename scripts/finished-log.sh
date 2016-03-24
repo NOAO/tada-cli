@@ -83,7 +83,24 @@ function echonverbose () {
     fi
 }
 
+function countmatches() {
+    found=0
+    for str in "${strings[@]%?}"; do
+        if grep -F "$str" $LOGFILE > /dev/null; then
+            found=$(( $found + 1 ))
+        fi
+    done
+    echo $found
+}
 
+function mismatches() {
+    for str in "${strings[@]%?}"; do
+        if ! grep -F "$str" $LOGFILE > /dev/null; then
+            echo "Not Found: $str"
+        fi
+    done
+}
+        
 maxTries=$TIMEOUT
 readarray strings < $MANIFEST
 tries=0
@@ -97,7 +114,11 @@ for str in "${strings[@]%?}"; do
 	    if [ "$tries" -gt "$maxTries" ]; then
             echoverbose ""
 	        echo
-	        echo "Aborted after $maxTries seconds: \"$str\" NOT FOUND"
+	        echo "# Aborted after $maxTries seconds: \"$str\" NOT FOUND"
+            total=${#strings[@]}
+            found=`countmatches`
+            mismatches
+            echo "Found $found/$total items"
 	        exit 1
 	    fi
 	    sleep 1
