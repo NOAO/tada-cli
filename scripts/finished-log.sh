@@ -110,7 +110,7 @@ for str in "${strings[@]%?}"; do
     echonverbose -n "# wait($maxTries)"
     while ! grep -F "$str" $LOGFILE > /dev/null; do
 	    tries=$((tries+1))
-    	echonverbose "."
+    	    echonverbose "."
 	    if [ "$tries" -gt "$maxTries" ]; then
             echoverbose ""
 	        echo
