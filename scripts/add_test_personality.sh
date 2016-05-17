@@ -69,8 +69,6 @@ fitsfile=$1
 
 
 cat > ${fitsfile}.yaml <<EOF
-options: 
-    nothing_here: 0
 params:
     filename: $fitsfile
     job_tag: TADASMOKE

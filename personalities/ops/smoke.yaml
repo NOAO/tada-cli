@@ -2,3 +2,5 @@ options: {}
 params:
   job_tag: TADASMOKE
   test_resubmit: '2'
+  do_audit: true
+  
