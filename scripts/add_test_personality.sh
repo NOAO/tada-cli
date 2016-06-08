@@ -67,10 +67,14 @@ fitsfile=$1
 
 ##############################################################################
 
+md5=`md5sum ${fitsfile} | awk '{ print $1 }'`
 
 cat > ${fitsfile}.yaml <<EOF
+options:
+    DTACQNAM: $fitsfile
 params:
     filename: $fitsfile
+    md5sum: $md5
     job_tag: TADASMOKE
     test_resubmit: 2
 EOF
