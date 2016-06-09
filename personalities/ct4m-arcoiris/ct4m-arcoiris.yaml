@@ -5,7 +5,7 @@ options:
   PRODTYPE: image
   DTINSTRU: ARCOIRIS
 params:
-  OPS_PREAPPLY_UPDATE: 'YES'
+  OPS_PREAPPLY_UPDATE: 'yes'
   calchdr:
     - DTCALDATfromDATEOBSchile
     - trustHdrPropid

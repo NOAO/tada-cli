@@ -19,4 +19,4 @@ params:
   - addTimeToDATEOBS
   - DTCALDATfromDATEOBStus
   - bokOBSID
-  warn_unknown: '0'
+
