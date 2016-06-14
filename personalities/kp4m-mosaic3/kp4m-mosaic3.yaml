@@ -6,5 +6,5 @@ options:
   PRODTYPE: image
 params:
   calchdr:
-  - trustHdrPropid
   - DTCALDATfromDATEOBStus
+  - trustHdrPropid
