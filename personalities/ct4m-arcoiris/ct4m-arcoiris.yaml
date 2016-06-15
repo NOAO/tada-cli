@@ -3,7 +3,7 @@ options:
   DTTELESC: ct4m
   PROCTYPE: raw
   PRODTYPE: image
-  DTINSTRU: ARCOIRIS
+  DTINSTRU: arcoiris
 params:
   OPS_PREAPPLY_UPDATE: 'yes'
   calchdr:
