@@ -1,7 +1,7 @@
 options:
   DTINSTRU: bench
   DTSITE: kp
-  DTTELESC: kp35m
+  DTTELESC: wiyn
   PROCTYPE: raw
   PRODTYPE: image
 params:
