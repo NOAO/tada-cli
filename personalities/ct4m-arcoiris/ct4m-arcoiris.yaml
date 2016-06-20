@@ -6,6 +6,7 @@ options:
   DTINSTRU: arcoiris
 params:
   OPS_PREAPPLY_UPDATE: 'yes'
+  jobid_type: obsmicro
   calchdr:
     - DTCALDATfromDATEOBSchile
     - trustHdrPropid
