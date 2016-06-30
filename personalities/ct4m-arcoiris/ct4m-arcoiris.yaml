@@ -9,4 +9,3 @@ params:
   jobid_type: obsmicro
   calchdr:
     - DTCALDATfromDATEOBSchile
-    - trustHdrPropid

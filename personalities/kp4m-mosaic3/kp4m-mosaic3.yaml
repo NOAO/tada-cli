@@ -7,4 +7,3 @@ options:
 params:
   calchdr:
   - DTCALDATfromDATEOBStus
-  - trustHdrPropid

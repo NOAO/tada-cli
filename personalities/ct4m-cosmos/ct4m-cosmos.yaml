@@ -7,4 +7,3 @@ options:
 params:
   calchdr:
   - DTCALDATfromDATEOBSchile
-  - trustSchedPropid

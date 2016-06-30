@@ -6,6 +6,5 @@ options:
   PRODTYPE: image
 params:
   calchdr:
-  - trustHdrPropid
   - IMAGTYPEtoOBSTYPE
   - DTCALDATfromDATEOBStus

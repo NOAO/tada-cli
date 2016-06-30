@@ -14,7 +14,6 @@ options:
   PRODTYPE: Image
 params:
   calchdr:
-  - trustHdrPropid
   - IMAGTYPEtoOBSTYPE
   - addTimeToDATEOBS
   - DTCALDATfromDATEOBStus

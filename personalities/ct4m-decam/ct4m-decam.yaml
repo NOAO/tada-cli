@@ -5,5 +5,4 @@ options:
   PROCTYPE: raw
 params:
   calchdr:
-  - trustHdrPropid
   - DTCALDATfromDATEOBSchile

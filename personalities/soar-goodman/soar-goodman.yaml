@@ -11,4 +11,3 @@ params:
   - addTimeToDATEOBS
   - DTCALDATfromDATEOBSchile
   - INSTRUMEtoDT
-  - trustSchedOrAAPropid

@@ -9,4 +9,3 @@ params:
   calchdr:
   - DATEOBSfromDATE
   - DTCALDATfromDATEOBStus
-  - trustSchedPropid
