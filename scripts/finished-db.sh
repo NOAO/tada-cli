@@ -107,16 +107,16 @@ echoverbose "# Waiting $maxTries seconds for srcfiles to be submited: $SRCFILES"
 for f in $SRCFILES; do
     echonverbose "$f($tries); "
     while [ `serviced $f` -eq "0" ]; do
-	tries=$((tries+1))
-  	echonverbose "."
-	if [ "$tries" -gt "$maxTries" ]; then
+	    tries=$((tries+1))
+  	    echonverbose "."
+	    if [ "$tries" -gt "$maxTries" ]; then
             echoverbose ""
-	    echo
-	    echo "# Aborted after $maxTries seconds"
-	    echo "# Not serviced: $f"
-	    exit 1
-	fi
-	sleep 1
+	        echo
+	        echo "# Aborted after $maxTries seconds"
+	        echo "# Not serviced: $f"
+	        exit 1
+	    fi
+	    sleep 1
     done
 done
 echoverbose " Done in $tries seconds"
