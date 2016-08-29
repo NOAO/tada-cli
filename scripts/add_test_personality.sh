@@ -64,12 +64,13 @@ fi
 report=${1:-$HOME/logs/foo.report}
 
 fitsfile=$1
+dropfile=$2
 
 ##############################################################################
 
 md5=`md5sum ${fitsfile} | awk '{ print $1 }'`
 
-cat > ${fitsfile}.yaml <<EOF
+cat > ${dropfile}.yaml <<EOF
 options:
     DTACQNAM: $fitsfile
 params:
