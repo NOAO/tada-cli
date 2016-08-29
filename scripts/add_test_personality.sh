@@ -63,17 +63,17 @@ fi
 
 report=${1:-$HOME/logs/foo.report}
 
-fitsfile=$1
-
+origfits=$1
+localfits=$2
 ##############################################################################
 
-md5=`md5sum ${fitsfile} | awk '{ print $1 }'`
+md5=`md5sum ${localfits} | cut -d' ' -f1`
 
-cat > ${fitsfile}.yaml <<EOF
+cat > ${localfits}.yaml <<EOF
 options:
-    DTACQNAM: $fitsfile
+    DTACQNAM: $origfits
 params:
-    filename: $fitsfile
+    filename: $origfits
     md5sum: $md5
     job_tag: TADASMOKE
     test_resubmit: 2
