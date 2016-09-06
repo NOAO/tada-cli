@@ -61,8 +61,6 @@ fi
 #!echo "Remaining arguments:"
 #!for arg do echo '--> '"\`$arg'" ; done
 
-report=${1:-$HOME/logs/foo.report}
-
 origfits=$1
 localfits=$2
 
@@ -71,13 +69,13 @@ localfits=$2
 md5=`md5sum ${localfits} | cut -d' ' -f1`
 
 cat > ${localfits}.yaml <<EOF
->>>>>>> 310469926f4d6e3ae88cae9077dff34c2be59d1e
 options:
     DTACQNAM: $origfits
 params:
     filename: $origfits
     md5sum: $md5
     job_tag: TADASMOKE
+    do_audit: True
     test_resubmit: 2
 EOF
 
