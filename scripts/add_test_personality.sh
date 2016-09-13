@@ -11,7 +11,7 @@ dir=`dirname $0`
 SCRIPT=$(readlink -f $0)      #Absolute path to this script
 SCRIPTPATH=$(dirname $SCRIPT) #Absolute path this script is in
 
-usage="USAGE: $cmd [options] [reportFile]
+usage="USAGE: $cmd [options] origFITSfnanme absPathToLocalFITS
 OPTIONS:
   -s <smoke>:: Number of progress updates per second (default=0)
   -v <verbosity>:: higher number for more output (default=0)
@@ -48,7 +48,7 @@ done
 for (( x=1; x<$OPTIND; x++ )); do shift; done
 
 
-RAC=1 # Required Argument Count
+RAC=2 # Required Argument Count
 if [ $# -lt $RAC ]; then
     echo "Not enough non-option arguments. Expect at least $RAC."
     echo >&2 "$usage"
