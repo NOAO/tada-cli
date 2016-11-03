@@ -1,0 +1,12 @@
+options:
+  AAPROPID: smarts 
+  DTSITE: ct
+  DTTELESC: ct09m
+  PROCTYPE: raw
+  PRODTYPE: image
+  DTINSTRU: ccd_imager
+params:
+  OPS_PREAPPLY_UPDATE: 'YES'
+  calchdr:
+    - DTCALDATfromDATEOBSchile
+    - IMAGTYPEtoOBSTYPE
