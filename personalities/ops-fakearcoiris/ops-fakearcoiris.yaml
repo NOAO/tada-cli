@@ -1,0 +1,9 @@
+options:
+  DTSITE: ct
+  PROCTYPE: raw
+  PRODTYPE: image
+params:
+  OPS_PREAPPLY_UPDATE: 'yes'
+  jobid_type: obsmicro
+  calchdr:
+    - DTCALDATfromDATEOBSchile
