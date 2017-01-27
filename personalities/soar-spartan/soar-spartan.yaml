@@ -10,3 +10,5 @@ params:
   - addTimeToDATEOBS
   - DTCALDATfromDATEOBSchile
   - INSTRUMEtoDT
+  - DETSERNOtoDTSERNO
+  
