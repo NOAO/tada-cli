@@ -7,7 +7,6 @@ options:
   PRODTYPE: image
 params:
   calchdr:
-  - addTimeToDATEOBS
   - DTCALDATfromDATEOBSchile
   - INSTRUMEtoDT
   - DETSERNOtoDTSERNO
