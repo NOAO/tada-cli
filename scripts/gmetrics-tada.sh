@@ -4,10 +4,15 @@ if [ ! -x /usr/bin/gmetric ]; then
     exit
 fi
 
+source /opt/tada/venv/bin/activate
+
 opts="--type=uint16 --units=size --group=tada"
-/usr/bin/gmetric $opts -n tada_inactive -v `/usr/bin/dqcli -c inactive` 
-/usr/bin/gmetric $opts -n tada_active   -v `/usr/bin/dqcli -c active`
-/usr/bin/gmetric $opts -n tada_records  -v `/usr/bin/dqcli -c records`
+#/usr/bin/gmetric $opts -n tada_inactive -v `/usr/bin/dqcli -c inactive` 
+# McManus Testing 2017/04/24
+/usr/bin/gmetric $opts -n tada_active   -v `/opt/tada/venv/bin/dqcli -c active`
+#/usr/bin/gmetric $opts -n tada_records  -v `/usr/bin/dqcli -c records`
+
+exit
 
 if [ "MOUNTAIN" = $hosttype ]; then
     # For MOUNTAIN
