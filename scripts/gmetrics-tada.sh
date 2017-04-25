@@ -7,10 +7,13 @@ fi
 source /opt/tada/venv/bin/activate
 
 opts="--type=uint16 --units=size --group=tada"
-#/usr/bin/gmetric $opts -n tada_inactive -v `/usr/bin/dqcli -c inactive` 
-# McManus Testing 2017/04/24
-/usr/bin/gmetric $opts -n tada_active   -v `/opt/tada/venv/bin/dqcli -c active`
-#/usr/bin/gmetric $opts -n tada_records  -v `/usr/bin/dqcli -c records`
+personalities="pipeline-decam pipeline-mosaic3"
+
+for personality in $personalities; do
+  #/usr/bin/gmetric $opts -n tada_inactive -v `dqcli -c inactive`
+  /usr/bin/gmetric $opts -n tada_active_${personality} -v $(dqcli --list active | grep $personality | wc -l)
+  #/usr/bin/gmetric $opts -n tada_records  -v `dqcli -c records`
+done
 
 exit
 
@@ -27,4 +30,5 @@ else
     val=`find /var/tada/noarchive -type f | wc -l`
     /usr/bin/gmetric $opts -n tada_noarchive  -v $val
 fi
+
 
