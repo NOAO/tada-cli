@@ -7,7 +7,7 @@ fi
 source /opt/tada/venv/bin/activate
 
 opts="--type=uint16 --units=size --group=tada"
-personalities="pipeline-decam pipeline-mosaic3"
+personalities="pipeline-decam pipeline-mosaic3 pipeline-90prime"
 
 for personality in $personalities; do
   #/usr/bin/gmetric $opts -n tada_inactive -v `dqcli -c inactive`
