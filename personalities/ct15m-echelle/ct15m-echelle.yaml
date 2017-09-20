@@ -1,0 +1,11 @@
+options:
+  AAPROPID: smarts
+  DTINSTRU: echelle
+  DTSITE: ct
+  DTTELESC: ct15m
+  PROCTYPE: raw
+  PRODTYPE: image
+params:
+  calchdr:
+  - IMAGTYPEtoOBSTYPE
+  - DTCALDATfromDATEOBStus
