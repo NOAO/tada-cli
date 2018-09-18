@@ -7,5 +7,6 @@ options:
   PRODTYPE: image
 params:
   calchdr:
-  - DATEOBSfromDATE
+  #- DATEOBSfromDATE
+  - DATEOBS_missingT_to_ISO
   - DTCALDATfromDATEOBStus
