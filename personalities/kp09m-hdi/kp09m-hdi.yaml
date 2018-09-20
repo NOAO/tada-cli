@@ -6,5 +6,6 @@ options:
   PROCTYPE: raw
   PRODTYPE: image
 params:
+  jobid_type: obsmicro
   calchdr:
   - DTCALDATfromDATEOBStus
