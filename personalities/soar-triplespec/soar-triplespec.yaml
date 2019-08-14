@@ -1,0 +1,11 @@
+options:
+  DTSITE: cp
+  DTTELESC: soar
+  PROCTYPE: raw
+  PRODTYPE: image
+  DTINSTRU: triplespec
+params:
+  OPS_PREAPPLY_UPDATE: 'yes'
+  jobid_type: obsmicro
+  calchdr:
+    - DTCALDATfromDATEOBSchile

@@ -7,6 +7,7 @@ options:
   PRODTYPE: image
 params:
   calchdr:
+  - DATEOBSmicro
   - DTCALDATfromDATEOBSchile
   - INSTRUMEtoDT
   - DETSERNOtoDTSERNO
