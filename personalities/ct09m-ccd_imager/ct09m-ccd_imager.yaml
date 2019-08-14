@@ -8,5 +8,6 @@ options:
 params:
   OPS_PREAPPLY_UPDATE: 'YES'
   calchdr:
+    - DATEOBSmicro
     - DTCALDATfromDATEOBSchile
     - IMAGTYPEtoOBSTYPE
