@@ -18,6 +18,8 @@ if [ $(hostname) == "valls2.ctio.noao.edu" ]; then
 elif [ $(hostname) == "valtu1.sdm.noao.edu" ]; then
   COUNT=$(find /var/tada/dropbox/${OBSNIGHT}/ct4m-decam/ -type f -name "*.fz" | wc -l)
   /usr/bin/gmetric $opts -n ct4m-decam-xfer-tucson-incoming -v $COUNT
+  COUNT=$(find /net/archive/mtn/${OBSNIGHT}/ct4m/ -type f -name "*.fz" | wc -l)
+  /usr/bin/gmetric $opts -n ct4m-decam-xfer-tucson-archived -v $COUNT
   COUNT=$(dqcli --list active | grep ct4m-decam | wc -l)
   /usr/bin/gmetric $opts -n ct4m-decam-xfer-tucson-ingestbacklog -v $COUNT
 else
