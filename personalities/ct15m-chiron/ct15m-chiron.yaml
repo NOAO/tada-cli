@@ -7,5 +7,6 @@ options:
   PRODTYPE: image
 params:
   calchdr:
+  - DATEOBSmicro        
   - IMAGTYPEtoOBSTYPE
   - DTCALDATfromDATEOBSchile
